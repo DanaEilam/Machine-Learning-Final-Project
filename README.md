@@ -13,7 +13,7 @@ The project is divided into 3 main phases:
 
 # Project steps
 
-### Data investigation
+### Data investigation:
 
 Initially, we examined all 23 columns in the database: we checked how many empty values each variable has, the distributions of the variables (with an emphasis on checking for outliers), 
 and looked for correlations between the different variables. 
@@ -36,7 +36,7 @@ We relied on the training set to find the best hyperparameters through Grid Sear
 Since there is a need to maximize the AUC of each model, we used Grid Search to maximize the AUC for the data.
 Between model and model, we examined various parameters that we believe are significant and influential for the tested model.
 
-### Model evaluation
+### Model evaluation:
 Building the Confusion Matrix – this is the matrix for the RandomForest Classifier model
 <br><br>
 <div align="center">
@@ -63,7 +63,7 @@ We plotted ROC curves and calculated the AUC for each model for the train and va
 <br>
 In light of our results, we found that the RandomForest Classifier model has the highest AUC for both validation and train, and therefore we chose this model as our predictive model.
 
-### Execution of the prediction
+### Execution of the prediction:
 We read the test file and ran the entire processing procedure on it that was done on the train file. 
 We ran the RandomForest Classifier model again on all the values from the train set after processing.  
 After that, we performed the prediction on the test file and received the probability of making a purchase or not for each individual ID. 
