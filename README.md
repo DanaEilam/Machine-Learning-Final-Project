@@ -79,5 +79,4 @@ After evaluating the models using K-Fold, we found that the model with the highe
 We decided to perform the prediction using this model on the test file and saved the results in a new file. 
 
 
-In summary, the project was challenging but successful. We invested a lot of time, thought, and effort to get the most out of every step we took together in the project.
-We met regularly to work on the project together from start to finish and delved into the smallest details. We were partners in every part of the process, we learned a lot, and we grew together.
+In summary, the project was challenging but successful. We invested a lot of time, thought, and effort to get the most out of every step we took in the project and we learned a lot.
