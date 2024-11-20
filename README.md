@@ -29,15 +29,15 @@ aggregated information (for example, quarterly information), removed outliers, r
 because of a significant amount of missing data.
 
 ### Building machine learning models:
-We chose to use the following models: Naive Bayes classifier, Logistic regression, Random Decision tree, RandomForest classifier.
+We chose to use the following models: Naive Bayes Classifier, Logistic Regression, Random Decision Tree, Random Forest Classifier.
 
 We used Grid Search to select the best hyperparameters. We divided the processed database into train and validation.
 We relied on the training set to find the best hyperparameters through Grid Search, and with the validation set, we examined our results.
 Since there is a need to maximize the AUC of each model, we used Grid Search to maximize the AUC for the data.
-Between model and model, we examined various parameters that we believe are significant and influential for the tested model.
+Between model and model, we examined various parameters that we believed were significant and influential for the tested model.
 
 ### Model evaluation:
-Building the Confusion Matrix – this is the matrix for the RandomForest Classifier model
+Building the Confusion Matrix – this is the matrix for the Random Forest Classifier model
 <br><br>
 <div align="center">
 <img src="https://github.com/user-attachments/assets/c2bac0e7-f633-430b-b080-bb5bc7190d50" class="center">
@@ -46,13 +46,13 @@ Building the Confusion Matrix – this is the matrix for the RandomForest Classi
 The X-axis represents what actually happened: whether a purchase was made or not. The Y-axis represents the predictions of the model: whether the model predicted that a purchase would occur or not.
 
 <br>In the matrix, the bottom right value is TP: the number of times the model correctly predicted a purchase. 
-<br>The bottom left value is FP: the number of times the model incorrectly predicted that there was a purchase.
-<br>The top right is FN: the number of times the model incorrectly predicted that there was no purchase.
+<br>The top right value is FP: the number of times the model incorrectly predicted that there was a purchase.
+<br>The bottom left is FN: the number of times the model incorrectly predicted that there was no purchase.
 <br>The top left value is TN: the number of times the model correctly predicted that there was no purchase.  
 
-Our model predicted correctly more times than not, with less than 5.5% of the predictions being incorrect.
+Our model predicted correctly more times than incorrectly, with less than 5.5% of the predictions being incorrect.
 
-The evaluation of the models was done using K-Fold, with the KfoldPlot function. We ran this on the validation set, thus we evaluated our models. 
+The evaluation of the models was done using K-Fold, with the KfoldPlot function. We ran this on the validation set for evaluating our models. 
 We plotted ROC curves and calculated the AUC for each model for the train and validation sets. 
 <div align="center">
 <img src="https://github.com/user-attachments/assets/ec75a8e8-a681-44d6-8509-57549d494bac" class="center">
@@ -61,11 +61,11 @@ We plotted ROC curves and calculated the AUC for each model for the train and va
 <img src="https://github.com/user-attachments/assets/0d2e5b1b-ae80-40c4-ab7b-6fc29ebf0f26" class="center">
 </div>
 <br>
-In light of our results, we found that the RandomForest Classifier model has the highest AUC for both validation and train, and therefore we chose this model as our predictive model.
+In light of our results, we found that the Random Forest Classifier model has the highest AUC for both validation and train, and therefore we chose this model as our predictive model.
 
 ### Execution of the prediction:
 We read the test file and ran the entire processing procedure on it that was done on the train file. 
-We ran the RandomForest Classifier model again on all the values from the train set after processing.  
+We ran the Random Forest Classifier model again on all the values from the train set after processing.  
 After that, we performed the prediction on the test file and received the probability of making a purchase or not for each individual ID. 
 Finally, we put the results into one file. Additionally, at the end of the program, we added a pipeline. In other words, a piece of code that briefly performs the entire process mentioned above.
 
@@ -75,7 +75,7 @@ We used various tools and applied the course material practically. The main goal
 We conducted an investigation and data processing in the project, from which we learned about the variables and drew conclusions, 
 addressed missing and outlier data, and worked to reduce dimensions using various techniques. 
 After that, we built machine learning models and ran them on the dataset. 
-After evaluating the models using K-Fold, we found that the model with the highest AUC score was the RandomForest Classifier. 
+After evaluating the models using K-Fold, we found that the model with the highest AUC score was the Random Forest Classifier. 
 We decided to perform the prediction using this model on the test file and saved the results in a new file. 
 
 
